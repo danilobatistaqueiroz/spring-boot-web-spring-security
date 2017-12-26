@@ -1,0 +1,4 @@
+com\labs\SpringBootWebApplication.class
+com\labs\error\MyAccessDeniedHandler.class
+com\labs\controller\DefaultController.class
+com\labs\config\SpringSecurityConfig.class
