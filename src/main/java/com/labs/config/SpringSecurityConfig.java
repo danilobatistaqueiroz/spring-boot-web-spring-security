@@ -24,8 +24,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 					.antMatchers("/", "/home", "/about").permitAll()
 					.antMatchers("/admin/**").hasAnyRole("ADMIN")
-                    .antMatchers("/order/**").hasAnyRole("SHIPPER")
-					.antMatchers("/user/**").hasAnyRole("USER")
+                    .antMatchers("/reports/**").hasAnyRole("ADMIN")
+                    .antMatchers("/shipment/**").hasAnyRole("SHIPPER")
+					.antMatchers("/user/**").hasAnyRole("USER","ADMIN")
 					.anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -46,6 +47,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("batista").password("abc").roles("SHIPPER")
                 .and()
-                .withUser("admin").password("sa").roles("ADMIN");
+                .withUser("admin").password("sa").roles("ADMIN")
+                .and()
+                .withUser("queiroz").password("su").roles("ADMIN");
     }
 }

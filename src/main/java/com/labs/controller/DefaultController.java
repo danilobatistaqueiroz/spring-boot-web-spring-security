@@ -26,9 +26,19 @@ public class DefaultController {
         return "/user";
     }
 
-    @GetMapping("/order")
-    public String order() {
-        return "/order";
+    @GetMapping("/shipments")
+    public String orders() {
+        return "/shipments";
+    }
+
+    @GetMapping("/reports/allusers")
+    public String allusers() {
+        return "/reports/all_users";
+    }
+
+    @GetMapping("/reports/dailyorders")
+    public String dailyorders() {
+        return "/reports/daily_orders";
     }
 
     @GetMapping("/about")

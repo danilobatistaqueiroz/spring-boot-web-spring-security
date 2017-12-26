@@ -1,4 +1,6 @@
-# Spring Boot + Spring MVC + Spring Security
+# Spring Boot + Spring Security
+
+## In Memory Authentication
 
 a sample application where you can access a home page.
 
@@ -6,15 +8,17 @@ its possible to do login with admin user, common user and shipper.
 
 with spring security, only who has ADMIN role can access /admin/* paths
 
-with USER role you can access /user/* paths
+with ADMIN role you can access /reports/* paths
 
-with SHIPPER role you can access /order/* paths
+with USER or ADMIN roles you can access /user/* paths
+
+with SHIPPER role you can access /shipment/* paths
 
 ___
 
 tecnologies:
 
-spring boot, spring mvc, spring security, thymeleaf, maven, java8, bootstrap, git, vs code
+spring boot, spring security, thymeleaf, maven, java8, bootstrap, git, vs code
 
 ___
 
